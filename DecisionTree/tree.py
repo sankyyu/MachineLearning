@@ -74,8 +74,6 @@ def createTree(dataSet,labels):
         return majorityCnt(classList)
     
     bestFeat=chooseBestFeatureToSplit(dataSet)
-    print(dataSet)
-    print(bestFeat)
     bestLabel=labels[bestFeat]
     myTree={bestLabel:{}}
     del(labels[bestFeat])
