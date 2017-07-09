@@ -96,4 +96,17 @@ def classify(inputTree,featLabels,testVec):
         classLabel=classify(featValue,featLabels,testVec)
     else: classLabel=featValue
     return classLabel
+
+def storeTree(tree,filename):
+    import pickle
+    fw=open(filename,'w')
+    pickle.dump(tree,fw)
+    fw.close()
+    
+def grabTree(filename):
+    import pickle
+    fr=open(filename)
+    return pickle.load(fr)
+
+
         
